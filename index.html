@@ -1,23 +1,103 @@
-
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arul Siragugal Academy</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+body{
+    background:linear-gradient(135deg,#0d47a1,#1976d2);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.container{
+    width:350px;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+h2{
+    text-align:center;
+    color:#0d47a1;
+    margin-bottom:20px;
+}
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:15px;
+}
+button{
+    width:100%;
+    padding:12px;
+    background:#0d47a1;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+button:hover{
+    background:#1565c0;
+}
+.footer{
+    text-align:center;
+    margin-top:15px;
+    color:#777;
+    font-size:13px;
+}
+</style>
+
 </head>
+
 <body>
-<div class="sidebar">
-  <img src="assets/logo.png" class="logo">
-  <a href="pages/dashboard.html">Dashboard</a>
-  <a href="pages/students.html">Students</a>
-  <a href="pages/attendance.html">Attendance</a>
-  <a href="pages/fees.html">Fees Analysis</a>
-  <a href="pages/income.html">Annual Income</a>
+
+<div class="container">
+
+<h2>🎓 Arul Siragugal Academy</h2>
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Teacher Login</button>
+
+<div class="footer">
+Tuition Management System
 </div>
-<div class="content">
-  <h1>Welcome – Arul Siragugal Academy</h1>
-  <p>Select menu from left</p>
+
 </div>
+
+<script>
+function login(){
+
+let username=document.getElementById("username").value.trim();
+let password=document.getElementById("password").value.trim();
+
+if(username==="admin" && password==="1234"){
+    alert("Login Successful");
+    window.location.href="dashboard.html";
+}
+else{
+    alert("Invalid Username or Password");
+}
+
+}
+</script>
+
 </body>
 </html>
+```
