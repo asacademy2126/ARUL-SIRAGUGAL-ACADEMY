@@ -1,63 +1,61 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arul Siragugal Academy</title>
+<title>Dashboard</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
+
 body{
-    background:linear-gradient(135deg,#0d47a1,#1976d2);
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+background:#f5f7fb;
 }
+
+.header{
+background:#0d47a1;
+color:white;
+padding:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+}
+
 .container{
-    width:350px;
-    background:#fff;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.3);
+max-width:1100px;
+margin:30px auto;
+padding:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
-h2{
-    text-align:center;
-    color:#0d47a1;
-    margin-bottom:20px;
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,.15);
+text-align:center;
+cursor:pointer;
+transition:.3s;
 }
-input{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:1px solid #ccc;
-    border-radius:6px;
-    font-size:15px;
+
+.card:hover{
+transform:translateY(-5px);
 }
-button{
-    width:100%;
-    padding:12px;
-    background:#0d47a1;
-    color:white;
-    border:none;
-    border-radius:6px;
-    font-size:16px;
-    cursor:pointer;
+
+.card h2{
+color:#0d47a1;
+margin-bottom:10px;
 }
-button:hover{
-    background:#1565c0;
-}
-.footer{
-    text-align:center;
-    margin-top:15px;
-    color:#777;
-    font-size:13px;
+
+.card p{
+color:#555;
 }
 </style>
 
@@ -65,39 +63,43 @@ button:hover{
 
 <body>
 
+<div class="header">
+🎓 Arul Siragugal Academy
+</div>
+
 <div class="container">
 
-<h2>🎓 Arul Siragugal Academy</h2>
+<div class="card">
+<h2>👨‍🎓 Students</h2>
+<p>Manage Students</p>
+</div>
 
-<input type="text" id="username" placeholder="Username">
+<div class="card">
+<h2>📅 Attendance</h2>
+<p>Daily Attendance</p>
+</div>
 
-<input type="password" id="password" placeholder="Password">
+<div class="card">
+<h2>💰 Fees</h2>
+<p>Fee Collection</p>
+</div>
 
-<button onclick="login()">Teacher Login</button>
+<div class="card">
+<h2>📝 Exams</h2>
+<p>Exam Marks</p>
+</div>
 
-<div class="footer">
-Tuition Management System
+<div class="card">
+<h2>📚 Homework</h2>
+<p>Study Materials</p>
+</div>
+
+<div class="card">
+<h2>📊 Reports</h2>
+<p>Monthly Reports</p>
 </div>
 
 </div>
-
-<script>
-function login(){
-
-let username=document.getElementById("username").value.trim();
-let password=document.getElementById("password").value.trim();
-
-if(username==="admin" && password==="1234"){
-    alert("Login Successful");
-    window.location.href="dashboard.html";
-}
-else{
-    alert("Invalid Username or Password");
-}
-
-}
-</script>
 
 </body>
 </html>
-```
